@@ -17,12 +17,17 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: product-catalog
-          uri: lb://PRODUCT-CATALOG
-          predicates:
-            - Path=/product/**
-        - id: shopping-cart
-          uri: lb://SHOPPING-CART
-          predicates:
-            - Path=/cart/**
+#      routes:
+#        - id: product-catalog
+#          uri: lb://PRODUCT-CATALOG
+#          predicates:
+#            - Path=/product/**
+#        - id: shopping-cart
+#          uri: lb://SHOPPING-CART
+#          predicates:
+#            - Path=/cart/**
+
+management:
+  endpoint:
+    service-registry:
+      enabled: true
