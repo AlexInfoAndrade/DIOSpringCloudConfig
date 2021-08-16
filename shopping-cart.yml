@@ -1,6 +1,6 @@
 server:
   port: 8082
-	
+
 spring:
   h2:
     console:
@@ -15,7 +15,7 @@ spring:
     hibernate:
       ddl-auto: update
   debug: true
-	
+
 eureka:
   instance: 
     hostname: localhost
