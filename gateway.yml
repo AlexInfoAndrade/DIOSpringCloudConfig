@@ -26,3 +26,5 @@ spring:
         uri: lb://CART
         predicates:
           - Path=/cart/**
+          
+          
