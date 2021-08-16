@@ -12,18 +12,18 @@ eureka:
 
 spring:
   cloud:
-    gateway:
+    gateway:    
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
-#      routes:
-#      - id: product
-#        uri: lb://PRODUCT
-#        predicates:
-#        - Path=/product/**
-#      - id: cart
-#        uri: lb://CART
-#        predicates:
-#        - Path=/cart/**
-        
+      routes:
+        - id: product-catalog
+          uri: lb://PRODUCT
+          predicates:
+            - Path=/product/**
+        - id: shopping-cart
+          uri: lb://CART
+          predicates:
+            - Path=/cart/**
+            
